@@ -59,7 +59,7 @@ textarea {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(18px);
-  background: rgba(8,17,31,.78);
+  background: rgba(8,17,31,.95);
   border-bottom: 1px solid var(--border);
 }
 
@@ -68,13 +68,14 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
 }
 
 .logo {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .logo span,
@@ -84,8 +85,16 @@ h1 span {
 
 .nav-links {
   list-style: none;
-  display: flex;
-  gap: 8px;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: block;
 }
 
 .nav-links a {
@@ -94,6 +103,8 @@ h1 span {
   color: var(--muted);
   border-radius: 10px;
   transition: .25s ease;
+  white-space: nowrap;
+  font-size: 14px;
 }
 
 .nav-links a:hover,
@@ -704,31 +715,32 @@ footer {
   }
 
   .navbar {
-    min-height: 70px;
-    padding: 12px 5%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    min-height: auto;
+    padding: 14px 5%;
+    display: block;
   }
 
   .logo {
+    display: block;
+    margin-bottom: 10px;
     font-size: 1.3rem;
   }
 
-  /* Hide hamburger completely */
   .menu-toggle {
     display: none !important;
   }
 
-  /* Show navigation directly */
   .nav-links {
     display: flex !important;
     width: 100%;
-    list-style: none;
-    gap: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
     overflow-x: auto;
+    overflow-y: hidden;
     white-space: nowrap;
-    padding: 5px 0 8px;
+    padding: 4px 0 8px;
+    margin: 0;
     scrollbar-width: none;
   }
 
@@ -742,9 +754,8 @@ footer {
 
   .nav-links a {
     display: block;
-    padding: 8px 11px;
+    padding: 8px 10px;
     font-size: 12px;
-    border-radius: 8px;
   }
 
   .hero {
