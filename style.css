@@ -357,3 +357,9 @@ footer {
   .interest-banner, .footer-inner { flex-direction: column; align-items: flex-start; }
   .page-hero { padding-top: 65px; }
 }
+.avatar img {
+  width: 100%;
+  heigth: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
