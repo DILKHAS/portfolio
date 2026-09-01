@@ -701,39 +701,63 @@ footer {
    MOBILE
    ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
+
+  .site-header {
+    height: auto;
+  }
+
+  .navbar {
+    height: auto;
+    min-height: 70px;
+    padding: 15px 6%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
   .menu-toggle {
-    display: block;
+    display: none !important;
   }
 
   .nav-links {
-    position: absolute;
-    top: 76px;
-    left: 5%;
-    right: 5%;
-    display: none;
-    flex-direction: column;
-    padding: 12px;
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    background: #0b1728;
+    display: flex !important;
+    width: 100%;
+    gap: 4px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 5px 0;
+    scrollbar-width: none;
   }
 
-  .nav-links.open {
-    display: flex;
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links li {
+    flex-shrink: 0;
   }
 
   .nav-links a {
-    padding: 12px;
+    padding: 8px 10px;
+    font-size: 12px;
   }
 
-  h1 {
-    font-size: 3rem;
-  }
-
-  .feature-grid {
+  .hero,
+  .about-grid,
+  .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-card {
+    margin-top: 30px;
   }
 
   .gallery-grid {
@@ -741,26 +765,15 @@ footer {
   }
 
   .gallery-photo {
-    max-height: none;
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: contain;
   }
 
-  .timeline-item {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline-number {
-    width: 55px;
-    height: 55px;
-  }
-
-  .interest-banner,
   .footer-inner {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 10px;
+    text-align: center;
   }
-
-  .page-hero {
-    padding-top: 65px;
-  }
-
 }
